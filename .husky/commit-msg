@@ -1,1 +1,1 @@
-node commit-form.js
+exec < /dev/tty && npx git-cz --hook || true

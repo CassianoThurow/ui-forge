@@ -1,1 +1,1 @@
-GIT_EDITOR=false node commit-form.js
+node .husky/commit-form.js
