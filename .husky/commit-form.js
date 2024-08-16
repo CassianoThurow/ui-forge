@@ -1,4 +1,3 @@
-const { exec } = require('child_process');
 const fs = require('fs');
 const readlineSync = require('readline-sync');
 
@@ -33,7 +32,6 @@ Itens:
 
 // Salvar changelog
 fs.appendFileSync('CHANGELOG.md', changelogTemplate);
-exec('git add CHANGELOG.md');
 
 
 console.log('Changelog atualizado!');
