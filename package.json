@@ -11,11 +11,11 @@
     "prepare": "husky",
     "release": "standard-version"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
+  "lint-staged": {
+  "src/*.js": [
+    "yarn format"
+  ]
+},
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@types/node": "^20.2.5",
@@ -40,6 +40,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.4",
     "inquirer": "^10.1.8",
+    "lint-staged": "^15.2.9",
     "postcss": "^8.4.24",
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.3.2"
