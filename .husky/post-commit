@@ -1,8 +1,4 @@
-# Verificar se o commit contém mudanças no CHANGELOG.md
 if git diff --cached --name-only | grep -q "CHANGELOG.md"; then
-    # Emendar o commit para incluir o changelog gerado
-    git commit --amend --no-edit --allow-empty
-
-    # Push das mudanças
-    git push --force-with-lease
+    # Não fazer nada se o changelog já foi incluído
+    exit 0
 fi
