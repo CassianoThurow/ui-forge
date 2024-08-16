@@ -11,10 +11,10 @@
     "prepare": "husky",
     "release": "standard-version"
   },
-  "lint-staged": {
-  "src/*.js": [
-    "yarn format"
-  ]
+"lint-staged": {
+"src/*.js": [
+"yarn format"
+]
 },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
