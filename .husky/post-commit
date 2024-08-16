@@ -1,3 +1,4 @@
+# Verificar se o último commit é relacionado apenas ao CHANGELOG.md
 LAST_COMMIT_MSG=$(git log -1 --pretty=%B)
 
 if echo "$LAST_COMMIT_MSG" | grep -q "Atualiza changelog"; then
@@ -8,6 +9,6 @@ node .husky/commit-form.js
 
 git add CHANGELOG.md
 
-git commit -m "Atualiza changelog"
+git commit --amend --no-edit
 
-git push
+git push --force-with-lease
