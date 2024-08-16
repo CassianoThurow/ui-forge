@@ -1,10 +1,11 @@
 import fs from 'fs';
 import readline from 'readline';
-import process from 'process';
 
 async function askQuestion(query) {
   const rl = readline.createInterface({
+    // eslint-disable-next-line no-undef
     input: process.stdin,
+    // eslint-disable-next-line no-undef
     output: process.stdout,
   });
 
@@ -23,7 +24,11 @@ async function run() {
 
   const commitMessage = `${type}${scope ? `(${scope})` : ''}: ${message}\n\n${body}\n${isBreaking.toLowerCase() === 'yes' ? 'BREAKING CHANGE: ' : ''}`;
 
-  fs.writeFileSync('.git/COMMIT_EDITMSG', commitMessage);
+  fs.writeFileSync(commitMessage);
 }
 
-run();
+run().then(() => {
+  // Execute o commit automaticamente após o script rodar
+  // eslint-disable-next-line no-undef
+  process.exit(0);
+});
