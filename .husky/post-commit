@@ -1,14 +1,8 @@
-# Verificar se o último commit é relacionado apenas ao CHANGELOG.md
-LAST_COMMIT_MSG=$(git log -1 --pretty=%B)
+# Verificar se o commit contém mudanças no CHANGELOG.md
+if git diff --cached --name-only | grep -q "CHANGELOG.md"; then
+    # Emendar o commit para incluir o changelog gerado
+    git commit --amend --no-edit --allow-empty
 
-if echo "$LAST_COMMIT_MSG" | grep -q "Atualiza changelog"; then
-    exit 0
+    # Push das mudanças
+    git push --force-with-lease
 fi
-
-node .husky/commit-form.js
-
-git add CHANGELOG.md
-
-git commit --amend --no-edit
-
-git push --force-with-lease

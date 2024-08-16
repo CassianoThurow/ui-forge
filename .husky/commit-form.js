@@ -23,10 +23,4 @@ User Story Relacionada: ${userStory}
 // Salvar changelog
 fs.appendFileSync(changelogFilePath, changelogTemplate);
 
-// Gerar a mensagem automática do commit
-const commitMessage = `Changelog atualizado: ${description} em ${date}`;
-
-// Salvar a mensagem do commit em um arquivo para ser usado no --amend
-fs.writeFileSync('.husky/.commitmsg', commitMessage);
-
 console.log('Changelog atualizado!');
