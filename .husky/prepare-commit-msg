@@ -1,2 +1,2 @@
 node .husky/commit-form.js
-git add CHANGELOG.md
+git commit CHANGELOG.md
