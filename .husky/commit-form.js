@@ -1,5 +1,6 @@
 const fs = require('fs');
 const readlineSync = require('readline-sync');
+const { execSync } = require('child_process');
 
 // Verificar se o arquivo CHANGELOG.md existe, se não, criar um arquivo vazio
 const changelogFilePath = 'CHANGELOG.md';
@@ -41,4 +42,7 @@ Itens:
 // Salvar changelog
 fs.appendFileSync(changelogFilePath, changelogTemplate);
 
-console.log('Changelog atualizado!');
+// Adicionar o CHANGELOG.md ao stage
+execSync('git add CHANGELOG.md');
+
+console.log('Changelog atualizado e adicionado ao stage!');
