@@ -42,3 +42,4 @@ Itens:
 fs.appendFileSync(changelogFilePath, changelogTemplate);
 
 console.log('Changelog atualizado!');
+
