@@ -12,9 +12,10 @@
     "release": "standard-version"
   },
 "lint-staged": {
-"src/*.js": [
-"yarn format"
-]
+    "*.{ts,tsx, json}": [
+      "prettier --write",
+      "eslint --max-warnings 0 ."
+    ]
 },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
