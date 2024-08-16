@@ -1,6 +1,13 @@
 const fs = require('fs');
 const readlineSync = require('readline-sync');
 
+// Verificar se o arquivo CHANGELOG.md existe, se não, criar um arquivo vazio
+const changelogFilePath = 'CHANGELOG.md';
+if (!fs.existsSync(changelogFilePath)) {
+    fs.writeFileSync(changelogFilePath, '');
+}
+
+// Perguntas interativas
 const branchName = readlineSync.question('Nome da branch: ');
 const date = new Date().toISOString().split('T')[0];
 const description = readlineSync.question('Descrição: ');
@@ -11,6 +18,7 @@ const version = readlineSync.question('Este item é direcionado à qual versão?
 const readyForQA = readlineSync.keyInYN('Pronto para QA? (Y/N) ');
 const documentationUpdated = readlineSync.keyInYN('A documentação foi atualizada? (Y/N) ');
 
+// Template do changelog
 const changelogTemplate = `
 [${branchName}][${date}]
 Descrição: ${description}
@@ -31,7 +39,6 @@ Itens:
 `;
 
 // Salvar changelog
-fs.appendFileSync('CHANGELOG.md', changelogTemplate);
-
+fs.appendFileSync(changelogFilePath, changelogTemplate);
 
 console.log('Changelog atualizado!');

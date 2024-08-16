@@ -1,2 +1,1 @@
-git add CHANGELOG.md
 exec < /dev/tty && npx git-cz --hook || true
