@@ -1,1 +1,10 @@
+node .husky/commit-form.js
+
+# Adicionar o CHANGELOG.md ao stage
+git add CHANGELOG.md
+
+# Criar um commit separado para o changelog
+git commit -m "Atualiza changelog"
+
+# Push dos commits para o repositório remoto
 git push
