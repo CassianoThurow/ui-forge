@@ -1,7 +1,8 @@
 {
   "name": "mosaic-next",
-  "version": "0.1.2",
+  "version": "0.1.96",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +10,14 @@
     "lint": "next lint",
     "commit": "cz",
     "prepare": "husky",
-    "release": "standard-version"
+    "generate-changelog": "standard-version"
   },
-                        "lint-staged": {
-                          "*.{ts,tsx, json}": [
-                            "prettier --write",
-                            "eslint --max-warnings 0 ."
-                          ]
-                        },
+  "lint-staged": {
+    "**/*.{jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@types/node": "^20.2.5",
@@ -33,17 +34,22 @@
     "typescript": "^5.0.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.9.0",
     "@tailwindcss/forms": "^0.5.3",
     "@types/react-flatpickr": "^3.8.8",
     "autoprefixer": "^10.4.14",
     "commitizen": "^4.3.0",
     "conventional-changelog-cli": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react": "^7.35.0",
+    "globals": "^15.9.0",
     "husky": "^9.1.4",
     "inquirer": "^10.1.8",
     "lint-staged": "^15.2.9",
     "postcss": "^8.4.24",
     "standard-version": "^9.5.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "typescript-eslint": "^8.1.0"
   }
 }
