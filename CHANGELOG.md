@@ -14,3 +14,19 @@ User Story Relacionada: testezinho
 [test][2024-08-19]
 Descrição: test
 User Story Relacionada: s
+
+[teste][2024-08-19]
+Descrição: teste
+User Story Relacionada: teste
+
+[teste][2024-08-19]
+Descrição: teste
+User Story Relacionada: teste
+
+[teste][2024-08-19]
+Descrição: teste
+User Story Relacionada: teste
+
+[te][2024-08-19]
+Descrição: te
+User Story Relacionada: ta

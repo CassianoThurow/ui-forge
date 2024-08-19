@@ -1,5 +1,2 @@
-node .husky/commit-form.js
-
-# Adicionar todos os arquivos ao stage, incluindo o CHANGELOG.md
 git add .
 git reset .env .env.development

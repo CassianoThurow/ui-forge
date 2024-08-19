@@ -10,12 +10,6 @@
     "commit": "cz",
     "prepare": "husky"
   },
-  "lint-staged": {
-    "**/*.{jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@types/node": "^20.2.5",
