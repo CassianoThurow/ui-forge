@@ -1,4 +1,0 @@
-if git diff --cached --name-only | grep -q "CHANGELOG.md"; then
-    # Não fazer nada se o changelog já foi incluído
-    exit 0
-fi

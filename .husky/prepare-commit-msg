@@ -1,4 +1,0 @@
-node .husky/commit-form.js
-
-# Adicionar o CHANGELOG.md ao stage
-git add CHANGELOG.md
