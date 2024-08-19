@@ -1,1 +1,13 @@
 exec < /dev/tty && npx git-cz --hook || true
+
+COMMIT_MSG=$(cat "$1")
+
+if echo "$COMMIT_MSG" | grep -q "^fix"; then
+  exit 0
+fi
+
+node .husky/commit-form.js
+
+git add CHANGELOG.md
+
+git commit --amend --no-edit --allow-empty
