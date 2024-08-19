@@ -142,7 +142,6 @@ export default function BarChart01({
             box.style.borderWidth = '3px'
             box.style.borderColor = item.fillStyle as string
             box.style.pointerEvents = 'none'
-            // Label
             const labelContainer = document.createElement('span')
             labelContainer.style.display = 'flex'
             labelContainer.style.alignItems = 'center'
